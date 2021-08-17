@@ -1,0 +1,4 @@
+{
+    "nuxt.isNuxtApp": false,
+    "liquid.format.enable": false
+}

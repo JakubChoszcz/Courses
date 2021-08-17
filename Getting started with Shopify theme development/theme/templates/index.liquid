@@ -1,0 +1,7 @@
+{% comment %} <h1>Jakub Choszcz</h1>
+<img src="{{ 'puppy.jpg' | asset_url }}"/> {% endcomment %}
+<h2>{{ collections['frontpage'].title }}</h2>
+
+{% for product in collections['frontpage'].products %}
+  {% render 'product-item', product: product %}
+{% endfor %}
