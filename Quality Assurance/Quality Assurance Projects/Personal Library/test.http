@@ -1,0 +1,141 @@
+# ==============
+# ==== POST ====
+# ==============
+POST https://personal-library.freecodecamp.rocks/api/books
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/api/books
+Content-Type: application/json
+
+###
+
+POST https://personal-library.freecodecamp.rocks/api/books
+Content-Type: application/json
+
+{
+    "title": "Moby Dick"
+}
+
+###
+
+POST http://localhost:3000/api/books
+Content-Type: application/json
+
+{
+    "title": "Moby Dick"
+}
+
+###
+
+# =============
+# ==== GET ====
+# =============
+GET https://personal-library.freecodecamp.rocks/api/books
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/api/books
+Content-Type: application/json
+
+###
+
+# ================
+# ==== DELETE ====
+# ================
+DELETE https://personal-library.freecodecamp.rocks/api/books
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:3000/api/books
+Content-Type: application/json
+
+###
+
+# =============
+# ==== GET ====
+# =============
+GET https://personal-library.freecodecamp.rocks/api/books/63bc8cd62527d00a960e2f3e
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/api/books/63bc943cb6ee4bfe70e98f15
+Content-Type: application/json
+
+###
+
+# ==============
+# ==== GET ====
+# ==============
+GET https://personal-library.freecodecamp.rocks/api/books/63bc8cd62527d00a960e2f3e
+Content-Type: application/json
+
+{
+    "comment": "sample comment"
+}
+
+###
+
+GET http://localhost:3000/api/books/63bc943cb6ee4bfe70e98f15
+Content-Type: application/json
+
+{
+    "comment": "sample comment"
+}
+
+###
+
+# ================
+# ==== DELETE ====
+# ================
+DELETE https://personal-library.freecodecamp.rocks/api/books/63bd23672527d00a960e2fa6
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:3000/api/books/63bc943cb6ee4bfe70e98f15
+Content-Type: application/json
+
+###
+
+# ================
+# ==== POST ====
+# ================
+POST https://personal-library.freecodecamp.rocks/api/books/63bd1d9a2527d0s0a960e2f9d
+Content-Type: application/json
+
+{
+    "comment": "just a comment"
+}
+
+###
+
+POST https://personal-library.freecodecamp.rocks/api/books/63bd1d9a2527d00a960e2f9d
+Content-Type: application/json
+
+{
+    "comment": "just a comment"
+}
+
+###
+
+POST http://localhost:3000/api/books/63bc96def7b666f309154f8d
+Content-Type: application/json
+
+{
+    "comment": "just a comment"
+}
+
+###
+
+POST https://personal-library.freecodecamp.rocks/api/books/63bd1d9a2527d00a960e2f9d
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/api/books/63bc96def7b666f309154f8d
+Content-Type: application/json
