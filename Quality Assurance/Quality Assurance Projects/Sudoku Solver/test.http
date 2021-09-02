@@ -1,0 +1,100 @@
+POST https://sudoku-solver.freecodecamp.rocks/api/check 
+Content-Type: application/json
+
+{
+  "puzzle": "..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..",
+  "coordinate": "A1",
+  "value": "1"
+}
+
+###
+
+POST http://localhost:3000/api/check 
+Content-Type: application/json
+
+{
+  "puzzle": "..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..",
+  "coordinate": "A1",
+  "value": "8"
+}
+
+###
+
+POST http://localhost:3000/api/check
+Content-Type: application/json
+
+{
+  "puzzle": "..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..",
+  "coordinate": "A1",
+  "value": "1"
+}
+
+###
+
+POST http://localhost:3000/api/check
+Content-Type: application/json
+
+{
+  "puzzle": "..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..",
+  "coordinate": "C3",
+  "value": "2"
+}
+
+###
+
+POST http://localhost:3000/api/check
+Content-Type: application/json
+
+{
+  "puzzle": "AA9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..",
+  "coordinate": "A1",
+  "value": "1"
+}
+
+###
+
+POST http://localhost:3000/api/check
+Content-Type: application/json
+
+{
+  "puzzle": "..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6.",
+  "coordinate": "A1",
+  "value": "1"
+}
+
+###
+
+POST http://localhost:3000/api/check
+Content-Type: application/json
+
+{
+  "puzzle": "..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..",
+  "value": "1"
+}
+
+###
+
+POST http://localhost:3000/api/check
+Content-Type: application/json
+
+{
+  "puzzle": "..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..",
+  "coordinate": "A0",
+  "value": "7"
+}
+
+###
+
+POST http://localhost:3000/api/check
+Content-Type: application/json
+
+{
+  "puzzle": "..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..",
+  "coordinate": "A1",
+  "value": "0"
+}
+
+###
+
+POST http://localhost:3000/api/check
+Content-Type: application/json
