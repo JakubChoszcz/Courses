@@ -1,0 +1,36 @@
+
+POST http://localhost:3000/api/issues/apitest
+Content-Type: application/json
+
+###
+
+PUT http://localhost:3000/api/issues/apitest
+Content-Type: application/json
+
+{
+    "_id": "1673097268792",
+    "issue_text": "New Issue Text"
+}
+
+###
+
+PUT http://localhost:3000/api/issues/apitest
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:3000/api/issues/apitest
+Content-Type: application/json
+
+###
+
+PUT http://localhost:3000/api/issues/apitest
+Content-Type: application/json
+
+{
+    "_id": "5f665eb46e296f6b9b6a504d",
+    "issue_text": "New Issue Text"
+}
+
+###
+
