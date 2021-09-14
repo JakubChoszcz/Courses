@@ -2,46 +2,20 @@
   <div>
     <div class="navbar">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Past Orders</a></li>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/products">Products</router-link></li>
+        <li><router-link to="/past-orders">Past Orders</router-link></li>
       </ul>
-      <button @click="toggleSidebar">Toggle Sidebar</button>
+      <button @click="toggleSidebar">Cart ({{ totalQuantity }})</button>
     </div>
     <sidebarVue 
       v-if="showSidebar" 
       :toggle="toggleSidebar"
-      :cart="cart" 
+      :cart="cart"
+      :inventory="inventory"
+      :removeItem="removeItem"
     />
-    <h2>Recommend</h2>
-    <div class="cards">
-      <div v-for="(product, i) in inventory.slice(0,3)" v-bind:key="product.id" class="card">
-        <h2>{{ product.name }}:</h2>
-        <div class="row">
-          <div class="cell"><label>Type:</label></div>
-          <div class="cell"><p>{{ product.type }}</p></div>
-        </div>
-        <div class="row">
-          <div class="cell"><label>Price:</label></div>
-          <div class="cell"><p>${{ product.price.USD }}</p></div>
-        </div>
-        <form>
-          <div class="row">        
-            <div class="cell">
-              <label>Quantity:</label>
-            </div>
-            <div class="cell">
-              <input type="number" v-model.number="product.quantity">
-            </div>
-          </div>
-        </form>
-        <div class="row">
-          <div class="cell">
-            <button @click="addToCart(product.name, i)">Add to cart</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <router-view />
   </div>
 </template>
 
@@ -60,6 +34,13 @@ export default {
       cart: {}
     }
   },
+  computed: {
+    totalQuantity() {
+      return Object.values(this.cart).reduce((acc, curr) => {
+        return acc + curr
+      }, 0)
+    }
+  },
   methods: {
     addToCart(name, index) {
       if (!this.cart[name]) this.cart[name] = 0
@@ -68,6 +49,9 @@ export default {
     },
     toggleSidebar() {
       this.showSidebar = !this.showSidebar
+    },
+    removeItem(name) {
+      delete this.cart[name]
     }
   },
   async mounted() {
@@ -95,26 +79,5 @@ p {
   display: flex;
   flex-direction: row;
   gap: 28px;
-}
-
-.cards {
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 8px;
-  border-bottom: 1px solid gray;
 }
 </style>

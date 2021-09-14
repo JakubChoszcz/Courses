@@ -4,28 +4,35 @@
             <h2>Cart</h2>
             <button @click="toggle">Toggle Sidebar</button>
         </div>
-        <ol>
-            <li>
+        <p v-if="!Object.keys(cart).length">No items in cart</p>
+        <ol v-else>
+            <li v-for="(quantity, key, i) in cart" :key="i">
                 <div class="row">
                     <div class="cell">Product</div>
-                    <div class="cell">Carrot</div>
+                    <div class="cell">{{ key }}</div>
                 </div>
                 <div class="row">
                     <div class="cell">Price</div>
-                    <div class="cell">$4.82</div>
+                    <div class="cell">${{ getPrice(key) }}</div>
                 </div>
                 <div class="row">
                     <div class="cell">Qty</div>
-                    <div class="cell">{{ cart.carrots }}</div>
+                    <div class="cell">{{ quantity }}</div>
                 </div>
                 <div class="row">
                     <div class="cell">Total</div>
-                    <div class="cell">${{ cart.carrots * 4.82 }}</div>
+                    <div class="cell">${{ quantity * getPrice(key) }}</div>
+                </div>
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell">
+                        <button @click="removeItem(key)">Delete</button>
+                    </div>
                 </div>
             </li>
         </ol>
         <div class="row">
-            <div class="cell">Total: ${{ cartTotal }}</div>
+            <div class="cell">Total: ${{ calculateTotal() }}</div>
             <div class="cell">
                 <button>Checkout</button>
             </div>
@@ -36,12 +43,21 @@
 <script>
 export default {
     name: 'sidebarVue',
-    props: ['toggle', 'cart'],
-    computed: {
-        cartTotal() {
-            return (this.cart.carrots * 4.82).toFixed(2)
+    props: ['toggle', 'cart', 'inventory', 'removeItem'],
+    methods: {
+        getPrice(name) {
+            const product = this.inventory.find((p) => {
+                return p.name == name
+            })
+            return product.price.USD
+        },
+        calculateTotal() {
+            const total = Object.entries(this.cart).reduce((acc, curr) => {
+                return acc + (curr[1] * this.getPrice(curr[0]))
+            }, 0)
+            return total.toFixed(2)
         }
-    }
+    },
 }
 </script>
 
