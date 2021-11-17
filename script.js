@@ -30,11 +30,11 @@
 //     if (c === 0 || r === 0) return 0;
 //     if (c === 1 && r === 1) return 1;
 
-//     memo[key] = gridTraveler(r - 1, c, memo) + gridTraveler(r, c - 1, memo)
-//     return memo[key]
+//     memo[key] = gridTraveler(r - 1, c, memo) + gridTraveler(r, c - 1, memo);
+//     return memo[key];
 // }
 
-// console.log(gridTraveler(14, 14))
+// console.log(gridTraveler(14, 14));
 
 
 
@@ -55,27 +55,27 @@
 //     }
 
 //     memo[targetSum] = false;
-//     return false
+//     return false;
 // }
 
-// console.log(canSum(300, [15, 7]))
+// console.log(canSum(300, [15, 7]));
 
 
 
 
 
 // const howSum = (targetSum, numbers, memo={}) => {
-//     if (targetSum in memo) return memo[targetSum]
+//     if (targetSum in memo) return memo[targetSum];
 
 //     if (targetSum === 0) return [];
 //     if (targetSum < 0) return null;
 
 //     for (const num of numbers) {
-//         const reminder = targetSum - num
-//         const reminderResult = howSum(reminder, numbers)
+//         const reminder = targetSum - num;
+//         const reminderResult = howSum(reminder, numbers);
 //         if (reminderResult !== null) {
-//             memo[reminderResult] = [ ...reminderResult, num]
-//             return memo[reminderResult]
+//             memo[reminderResult] = [ ...reminderResult, num];
+//             return memo[reminderResult];
 //         }
 //     }
 
@@ -83,14 +83,14 @@
 //     return null;
 // }
 
-// console.log(howSum(7, [2, 3, 4, 5]))
+// console.log(howSum(7, [2, 3, 4, 5]));
 
 
 
 
 
 // const bestSum = (targetSum, numbers, memo={}) => {
-//     if (targetSum in memo) return memo[targetSum]
+//     if (targetSum in memo) return memo[targetSum];
 
 //     if (targetSum === 0) return [];
 //     if (targetSum < 0) return null;
@@ -98,8 +98,8 @@
 //     let shortestCombination = null;
 
 //     for (let num of numbers) {
-//         const remainder = targetSum - num
-//         const remainderCombination = bestSum(remainder, numbers, memo)
+//         const remainder = targetSum - num;
+//         const remainderCombination = bestSum(remainder, numbers, memo);
 //         if (remainderCombination !== null) {
 //             const combination = [ ...remainderCombination, num ]
 //             if (shortestCombination === null || shortestCombination.length > combination.length) {
@@ -108,11 +108,11 @@
 //         }
 //     }
 
-//     memo[targetSum] = shortestCombination
-//     return shortestCombination
+//     memo[targetSum] = shortestCombination;
+//     return shortestCombination;
 // }
 
-// console.log(bestSum(7, [2, 3, 4, 7]))
+// console.log(bestSum(7, [2, 3, 4, 7]));
 
 
 
@@ -167,10 +167,10 @@
 
 
 // const allConstruct = (target, wordBank, memo={}) => {
-//     if (target in memo) return memo[target]
+//     if (target in memo) return memo[target];
 //     if (target === '') return [[]];
 
-//     const result = []
+//     const result = [];
 
 //     for (const word of wordBank) {
 //         if (target.indexOf(word) === 0) {
@@ -300,3 +300,73 @@
 // }
 
 // console.log(bestSum(100, [25, 1, 5, 2]));
+
+
+
+
+
+// const canConstruct = (target, wordBank) => {
+//     const table = Array(target.length + 1).fill(false);
+//     table[0] = true;
+
+//     for (let i = 0; i <= target.length; i++) {
+//         if (table[i] === true) {
+//             for (let word of wordBank) {
+//                 if (target.slice(i, i + word.length) === word) {
+//                     table[i + word.length] = true;
+//                 }
+//             }
+//         }
+//     }
+
+//     return table[target.length];
+// }
+
+// console.log(canConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't']));
+
+
+
+
+
+// const countConstruct = (target, wordBank) => {
+//     const table = Array(target.length + 1).fill(0);
+//     table[0] = 1;
+
+//     for (let i = 0; i <= target.length; i++) {
+//         if (table[i] !== 0) {
+//             for (let word of wordBank) {
+//                 if (target.slice(i, i + word.length) === word) {
+//                     table[i + word.length] += table[i];
+//                 }
+//             }
+//         }
+//     }
+
+//     return table[target.length];
+// }
+
+// console.log(countConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't']));
+
+
+
+
+
+// const allConstruct = (target, wordBank) => {
+//     const table = Array(target.length + 1)
+//         .fill()
+//         .map(() => []);
+//     table[0] = [[]];
+
+//     for (let i = 0; i <= target.length; i++) {
+//         for (let word of wordBank) {
+//             if (target.slice(i, i + word.length) === word) {
+//                 const newCombinations = table[i].map(subArray => [ ...subArray, word ]);
+//                 table[i + word.length].push(...newCombinations);
+//             }
+//         }
+//     }
+
+//     return table[target.length];
+// }
+
+// console.log(allConstruct('abcdef', ['ab', 'abc', 'cd', 'def', 'abcd', 'ef', 'c']));
