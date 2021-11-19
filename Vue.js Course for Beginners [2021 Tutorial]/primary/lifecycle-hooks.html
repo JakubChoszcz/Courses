@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue 3 Basics</title>
+    <style>
+        .box {
+            background: red;
+            height: 200px;
+            width: 200px;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <button @click="toggleBox">Toggle Box</button>
+        <text-box v-if="isVisible"/>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        let app = Vue.createApp({
+            data() {
+                return {
+                    isVisible: false
+                }
+            },
+            methods: {
+                toggleBox() {
+                    this.isVisible = !this.isVisible
+                }
+            },
+            updated() {
+                console.log('updated');
+            },
+        })
+        app.component('text-box', {
+            template: `<div class="box"></div>`,
+            created() {
+                console.log('created');
+            },
+            mounted() {
+                console.log('mounted');
+            },
+            unmounted() {
+                console.log('unmounted');
+            },
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+</html>
