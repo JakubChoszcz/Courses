@@ -1,0 +1,30 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dot {
+    stroke: black;
+}
+
+#tooltip {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background-color: #1f76b4cc;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px black;
+}
+
+.hidden {
+    display: none;
+    pointer-events: none;
+}
+
+#value p {
+    margin: 0;
+}
