@@ -123,8 +123,8 @@ const onMouseOver = (d, i, nodes) => {
     const tooltip = d3.select("#tooltip");
 
     tooltip.classed("hidden", false)
-            .style("left", `${d.x}px`)
-            .style("top", `${d.y}px`);
+            .style("left", `${d.pageX}px`)
+            .style("top", `${d.pageY}px`);
     
     tooltip.select("#date").text(`${i.year} - ${monthTable[i.month]}`);
     tooltip.select("#temperature").text(`${(8.66 + i.variance).toFixed(1)}℃`);
