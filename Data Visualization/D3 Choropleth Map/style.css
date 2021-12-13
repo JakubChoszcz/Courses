@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#title {
+    font-weight: 700;
+    font-size: 48px;
+    text-anchor: middle;
+}
+
+#description {
+    text-anchor: middle;
+}
+
+#source {
+    text-anchor: end;
+}
+
+#source a {
+    fill: purple;
+}
+
+.county {
+    stroke: white;
+    stroke-width: .2;
+}
+
+#tooltip {
+    background-color: #0a3161dd;
+    color: white;
+    position: absolute;
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transform: translate(5px, -35px);
+    pointer-events: none;
+}
+
+#tooltip.hidden {
+    display: none;
+}
