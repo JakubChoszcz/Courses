@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tooltip */
+#tooltip {
+    pointer-events: none;
+    position: absolute;
+    background-color: #666767dd;
+    padding: 8px;
+    max-width: 256px;
+    border-radius: 6px;
+    text-align: center;
+    color: white;
+    transform: translate(-50%, -80px);
+}
+
+#tooltip.hidden {
+    display: none;
+}
+
+/* Tree Map */
+#title {
+    font-size: 52px;
+    font-weight: 700;
+    text-anchor: middle;
+}
+
+#description {
+    font-size: 18px;
+    text-anchor: middle;
+}
+
+.cell-label {
+    font-size: 10px;
+    pointer-events: none;
+}
