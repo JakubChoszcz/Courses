@@ -6,10 +6,11 @@ const {
     postTask,
     getTask,
     patchTask,
-    deleteTask
+    deleteTask,
+    putTask
 } = require('../controllers/tasks');
 
 router.route('/').get(getAllTasks).post(postTask);
-router.route('/:id').get(getTask).patch(patchTask).delete(deleteTask);
+router.route('/:id').get(getTask).patch(patchTask).delete(deleteTask).put(putTask);
 
 module.exports = router;
