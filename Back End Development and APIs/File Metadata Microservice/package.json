@@ -1,0 +1,29 @@
+{
+  "name": "file_metadata",
+  "version": "0.0.1",
+  "description": "API project for freeCodeCamp",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "multer": "^1.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeCodeCamp/boilerplate-project-filemetadata.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freeCodeCamp/boilerplate-project-filemetadata/issues"
+  },
+  "homepage": "https://github.com/freeCodeCamp/boilerplate-project-filemetadata#readme",
+  "author": ""
+}
