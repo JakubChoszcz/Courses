@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js</title>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            template: `
+    <div>
+        <p v-if="counter === 2">{{ title }}</p>
+        <p v-else>{{ counterMultiply }}</p>
+        <button @click="increaseCounter">+1</button>
+        <button @click="decreaseCounter">-1</button>
+        <ul>
+            <li v-for="user in users"><p>{{ user.name }}</p></li>
+        </ul>
+    </div>`
+            ,
+            data: {
+                title: "Hello Vue!",
+                counter: 0,
+                users: [
+                    { name: 'Frodo'},
+                    { name: 'Sam'},
+                ]
+            },
+            computed: {
+                counterMultiply() {
+                    return this.counter * 2
+                }
+            },
+            watch: {
+                counter() {
+                    // alert('counter was updated')
+                }
+            },
+            methods: {
+                increaseCounter() {
+                    this.counter++
+                },
+                decreaseCounter() {
+                    this.counter--
+                }
+            }
+        })
+    </script>
+</body>
+</html>

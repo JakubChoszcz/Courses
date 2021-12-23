@@ -1,0 +1,2 @@
+authentication - proving your who your say you are
+authorization - the permissions you have
