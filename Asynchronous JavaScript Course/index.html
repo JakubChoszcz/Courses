@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JavaScript Course</title>
+</head>
+<body style="background-color: #444">
+    <h1>Asynchronous JavaScript Course</h1>
+
+    <!-- <script>
+        // Synchronous
+
+        console.log('I');
+        console.log('eat');
+        console.log('ice cream');
+        console.log('with');
+        console.log('a spoon');
+
+
+
+        // Asynchronous
+
+        console.log('I');
+        console.log('eat');
+        setTimeout(() => {
+            console.log('ice cream');
+        }, 2000);
+        console.log('with');
+        console.log('a spoon');
+    </script> -->
+
+    <!-- <script>
+        const one = (call_two) => {
+            console.log(' step 1 complete. please call step 2 ');
+
+            call_two();
+        };
+ 
+        const two = () => {
+            console.log(' step 2 ');
+        };
+        
+        one(two)
+    </script> -->
+
+    <!-- <script>        
+        let stocks = {
+            Fruits: [
+                "strawberry", 
+                "grapes", 
+                "banana", 
+                "apple"
+            ],
+            Liquids: [
+                "water",
+                "ice"
+            ],
+            Holders: [
+                "cone",
+                "cup",
+                "stick"
+            ],
+            Toppings: [
+                "chocolate",
+                "peanuts"
+            ]
+        };
+
+        const order = (fruit_name, call_production) => {
+            setTimeout(() => {
+                console.log(`${stocks.Fruits[fruit_name]} was selected`);
+
+                call_production();
+            }, 2000);
+        };
+
+        const production = () => {
+            setTimeout(() => {
+                console.log("production has started");
+
+                setTimeout(() => {
+                    console.log("the food has been chopped");
+
+                    setTimeout(() => {
+                        console.log(`${stocks.Liquids[0]} and ${stocks.Liquids[1]} was added`);
+
+                        setTimeout(() => {
+                            console.log("the machine was started");
+
+                            setTimeout(() => {
+                                console.log(`ice cream was placed on ${stocks.Holders[0]}`);
+
+                                setTimeout(() => {
+                                    console.log(`${stocks.Toppings[0]} was added as toppings`);
+
+                                    setTimeout(() => {
+                                        console.log("serve ice cream");
+                                    }, 2000);
+                                }, 3000);
+                            }, 2000);
+                        }, 1000)
+                    }, 1000)
+                }, 2000)
+            }, 0)
+        };
+
+        order(0, production);
+    </script> -->
+
+    <!-- <script>
+        let stocks = {
+            Fruits: [
+                "strawberry", 
+                "grapes", 
+                "banana", 
+                "apple"
+            ],
+            Liquids: [
+                "water",
+                "ice"
+            ],
+            Holders: [
+                "cone",
+                "cup",
+                "stick"
+            ],
+            Toppings: [
+                "chocolate",
+                "peanuts"
+            ]
+        };
+    
+        let is_shop_open = true;
+
+        const order = (time, work) => {
+            return new Promise((resolve, reject) => {
+                if (is_shop_open) {
+                    setTimeout(() => {
+                        resolve(work());
+                    }, time);
+                } else {
+                    reject(console.log("our shop is closed"));
+                }
+            });
+        };
+
+        order(2000, () => console.log(`${stocks.Fruits[0]} was selected`))
+        .then(() => {
+            return order(0, () => console.log("Production has started"));
+        })
+        .then(() => {
+            return order(2000, () => console.log("the food was choppped"));
+        })
+        .then(() => {
+            return order(1000, () => console.log(`${stocks.Liquids[0]} and ${stocks.Liquids[1]} was selected`));
+        })
+        .then(() => {
+            return order(1000, () => console.log("start the machine"));
+        })
+        .then(() => {
+            return order(2000, () => console.log(`ice cream placed on ${stocks.Holders[0]}`));
+        })
+        .then(() => {
+            return order(3000, () => console.log(`${stocks.Toppings[0]} was selected`));
+        })
+        .then(() => {
+            return order(1000, () => console.log("ice cream was served"));
+        })
+        .catch(() => {
+            console.log("Customer left");
+        })
+        .finally(() => {
+            console.log("day ended, shop is closed");
+        });
+    </script> -->
+
+    <!-- <script>
+        let stocks = {
+            Fruits: [
+                "strawberry", 
+                "grapes", 
+                "banana", 
+                "apple"
+            ],
+            Liquids: [
+                "water",
+                "ice"
+            ],
+            Holders: [
+                "cone",
+                "cup",
+                "stick"
+            ],
+            Toppings: [
+                "chocolate",
+                "peanuts"
+            ]
+        };
+
+        let is_shop_open = true;
+
+        const time = (ms) => {
+            return new Promise((resolve, reject) => {
+                if (is_shop_open) {
+                    setTimeout(resolve, ms);
+                } else {
+                    reject(console.log("shop is closed"));
+                }
+            })
+        };
+
+        const kitchen = async () => {
+            try {
+                await time(2000);
+                console.log(`${stocks.Fruits[0]} was selected`);
+
+                await time(0);
+                console.log("start the production");
+
+                await time(2000);
+                console.log("cut the fruit");
+
+                await time(1000);
+                console.log(`${stocks.Liquids[0]} and ${stocks.Liquids[1]} was added`);
+
+                await time(1000);
+                console.log("start the machine");
+
+                await time(2000);
+                console.log(`ice cream placed on ${stocks.Holders[0]}`);
+
+                await time(2000);
+                console.log("serve ice cream");
+            } catch (error) {
+                console.log("customer left", error);
+            } finally {
+                console.log("day ended, shop is closed");
+            }
+        };
+
+        kitchen();
+    </script> -->
+</body>
+</html>
