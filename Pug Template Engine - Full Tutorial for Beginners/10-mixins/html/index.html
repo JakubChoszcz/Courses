@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mixins in Pug</title>
+    <style>
+      .comment {
+          font-family: sans-serif;
+          line-height: 1.5;
+          padding: 10px;
+          border: 1px solid #555;
+          width: 250px;
+      }
+      
+      .date {
+          font-size: 85%;
+          text-align: right;
+      }
+      
+      .author {
+          font-size: 110%;
+          font-weight: bold;
+      }
+      
+      .text {
+          font-size: 100%
+      }
+    </style>
+  </head>
+  <body> 
+    <div class="comment"> 
+      <div class="date">31-12-2021</div>
+      <div class="author">Sylwester</div>
+      <div class="text">It's today guys!</div>
+    </div>
+    <div class="comment"> <em>(Posted by Admin)</em>
+      <div class="date">08-03-2001</div>
+      <div class="author">Jakub</div>
+      <div class="text">Happy Birthday, Jakub!</div>
+    </div>
+    <div class="comment"> 
+      <div class="date">19-09-1997</div>
+      <div class="author">Maja</div>
+      <div class="text">Life has just begun!</div>
+    </div>
+  </body>
+</html>

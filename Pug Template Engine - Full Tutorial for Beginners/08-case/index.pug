@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title Case Statement in Pug
+    body
+        //- orderStatus => Pending || In_Transit || Completed
+        - const orderStatus = "Pending"
+
+        case orderStatus
+            when "Pending"
+                p Your order has been places and will be sent shortly.
+            when "In_Transit"
+                p Your order is one the move - you should recieve it soon!
+            when "Completed"
+                p Your order has been completed.
+            default
+                p Sorry, we aren't sure what happend with your order...

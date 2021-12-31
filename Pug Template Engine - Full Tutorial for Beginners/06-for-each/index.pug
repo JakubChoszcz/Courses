@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+    body
+        h1 For/Each Loop
+        - const names = ["Dom", "Sophie", "Mark"]
+        each n, i in names
+            p= `i: ${i} - n: ${n}`
+        
+        br
+
+        - const grades = {"Web Dev": 85, "Software Design": 76}
+        each n, i in grades
+            p= `${i} - ${n}`
+        
+        br
+
+        for n, i in []
+            p= `${i} - ${n}`
+        else
+            strong No values are here!
+        
