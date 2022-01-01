@@ -1,9 +1,13 @@
-var person = {
-    name: 'Jakub',
-    age: 20
+var userInput;
+var userName;
+userInput = 5;
+userInput = 'Word';
+if (typeof userInput === 'string') {
+    userName = userInput;
+}
+var generateError = function (message, code) {
+    throw { message: message, errorCode: code };
+    // while (true) {}
 };
-// const person = {
-//     name: 'Jakub',
-//     age: 20
-// };
-console.log(person.name);
+var result = generateError('An error occured!', 500);
+console.log(typeof result);

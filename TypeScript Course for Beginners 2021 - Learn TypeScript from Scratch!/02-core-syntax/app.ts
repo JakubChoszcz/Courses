@@ -1,14 +1,17 @@
-const person: {
-    name: string;
-    age: number;
-} = {
-    name: 'Jakub',
-    age: 20
-};
+let userInput: unknown;
+let userName: string;
 
-// const person = {
-//     name: 'Jakub',
-//     age: 20
-// };
+userInput = 5;
+userInput = 'Word';
 
-console.log(person.name);
+if (typeof userInput === 'string') {
+    userName = userInput;
+}
+
+const generateError = (message: string, code: number): never => {
+    throw {message: message, errorCode: code};
+    // while (true) {}
+}
+
+const result = generateError('An error occured!', 500);
+console.log(typeof result);
