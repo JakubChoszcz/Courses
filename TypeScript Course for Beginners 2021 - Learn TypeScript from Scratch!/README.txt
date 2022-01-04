@@ -39,7 +39,7 @@ never - never - use it when you're sure, that a code will never occur / return a
 "exclude": [] <= exclude specific files/folders and compiler will not compile these files, you can use * sign
 "include": [] <= opposite to the "exclude" option
 "files": [] <= include, but only files
-// "lib": [] === "lib": ["DOM", "es6", "DOM.Iterable", "ScriptHost"]
+commented "lib": [] === "lib": ["DOM", "es6", "DOM.Iterable", "ScriptHost"]
 "sourceMap": true
 "outDir": "./dist" <= specify an output folder for all emitted files
 "rootDir": "./src" <= specify the root folder within your source files
