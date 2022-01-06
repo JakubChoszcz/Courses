@@ -40,3 +40,8 @@ export const getStaticProps = async () => {
         revalidate: 10,
     };
 }
+
+Only Allowed in a Page
+getStaticProps can only be exported from a page. You can’t export it from non-page files.
+
+One of the reasons for this restriction is that React needs to have all the required data before the page is rendered.
