@@ -13,6 +13,7 @@ npm run dev <= starts development server
 
 npm run build <= command before deploy
 
+npm i mongodb
 
 
 
