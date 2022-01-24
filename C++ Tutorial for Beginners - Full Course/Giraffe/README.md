@@ -14,6 +14,7 @@ int
 number
 bool
 
+class
 
 
 <!-- FUNCTION TYPES -->
@@ -31,3 +32,8 @@ void
 ===
 <
 <=
+
+
+
+&*variable name* <= shows place in RAM
+**variable name* <= create new pointer
