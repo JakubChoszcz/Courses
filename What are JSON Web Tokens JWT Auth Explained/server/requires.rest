@@ -1,0 +1,25 @@
+POST http://localhost:4000/register
+Content-Type: application/json
+
+{
+    "email": "jakub.choszcz@gmail.com", 
+    "password": "jakubPass"
+}
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "email": "jakub.choszcz@gmail.com", 
+    "password": "jakubPass"
+}
+
+###
+
+POST http://localhost:4000/logout
+
+###
+
+POST http://localhost:4000/protected
