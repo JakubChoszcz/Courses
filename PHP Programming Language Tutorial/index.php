@@ -139,12 +139,12 @@
 
 
 
-    <!-- <?php
-        $friends = array("Mike", "Girrafe", "Konrad", "Krzysztof");
-        $friends[4] = "Jakub";
+    <?php
+        // $friends = array("Mike", "Girrafe", "Konrad", "Krzysztof");
+        // $friends[4] = "Jakub";
 
-        echo count($friends);
-    ?> -->
+        // echo count($friends);
+    ?>
 
 
 
@@ -184,15 +184,15 @@
 
 
 
-    <!-- <?php
-        function sayHi($name, $age) {
-            echo "Hello $name, you are $age<br/>";
-        }
+    <?php
+        // function sayHi($name, $age) {
+        //     echo "Hello $name, you are $age<br/>";
+        // }
 
-        sayHi("Jakub", 21);
-        sayHi("Konrad", 20);
-        sayHi("Krzysiek", 19);
-    ?> -->
+        // sayHi("Jakub", 21);
+        // sayHi("Konrad", 20);
+        // sayHi("Krzysiek", 19);
+    ?>
 
 
 
@@ -320,33 +320,33 @@
 
 
 
-    <!-- <?php
-        $index = 1;
+    <?php
+        // $index = 1;
 
-        while ($index <= 5) {
-            echo "$index <br/>";
-            $index++;
-        }
+        // while ($index <= 5) {
+        //     echo "$index <br/>";
+        //     $index++;
+        // }
 
-        $index = 1;
+        // $index = 1;
 
-        do {
-            echo "$index <br/>";
-            $index++;
-        } while ($index <= 5)
-    ?> -->
-
-
+        // do {
+        //     echo "$index <br/>";
+        //     $index++;
+        // } while ($index <= 5)
+    ?>
 
 
 
-    <!-- <?php
-        $luckyNumbers = array(4, 8, 12, 16, 24);
 
-        for ($i = 0; $i < count($luckyNumbers); $i++) { 
-            echo "$luckyNumbers[$i] <br/>";
-        }
-    ?> -->
+
+    <?php
+        // $luckyNumbers = array(4, 8, 12, 16, 24);
+
+        // for ($i = 0; $i < count($luckyNumbers); $i++) { 
+        //     echo "$luckyNumbers[$i] <br/>";
+        // }
+    ?>
 
 
 
@@ -374,5 +374,203 @@
     <?php
         include "footer.html";
     ?> -->
+
+
+
+
+
+    <?php
+        // $title = "My First Post";
+        // $author = "Jakub";
+        // $wordCount = 360;
+        
+        // include "article-header.php";
+    ?>
+
+
+
+
+
+    <?php
+        // include "useful-tools.php";
+
+        // sayHello("Jakub");
+        // echo $feetInMile;
+    ?>
+
+
+
+
+
+    <?php
+        // class Book {
+        //     var $title;
+        //     var $author;
+        //     var $pages;
+        // }
+
+        // $book1 = new Book;
+        // $book1->title = "Harry Potter";
+        // $book1->author = "JK Rowling";
+        // $book1->pages = "360";
+
+        // $book2 = new Book;
+        // $book2->title = "Tolkien";
+        // $book2->author = "Lord of The Rings";
+        // $book2->pages = "720";
+    ?>
+
+
+
+
+
+    <?php
+        // class Book {
+        //     var $title;
+        //     var $author;
+        //     var $pages;
+
+        //     function __construct ($name) {
+        //         echo "$name <br/>";
+        //     }
+        // }
+
+        // $book1 = new Book("Rowling");
+        // $book1->title = "Harry Potter";
+        // $book1->author = "JK Rowling";
+        // $book1->pages = "360";
+
+        // $book2 = new Book("Tolkien");
+        // $book2->title = "Tolkien";
+        // $book2->author = "Lord of The Rings";
+        // $book2->pages = "720";
+    ?>
+
+
+
+
+
+    <?php
+        // class Book {
+        //     var $title;
+        //     var $author;
+        //     var $pages;
+
+        //     function __construct($aTitle, $aAuthor, $aPages) {
+        //         $this->title = $aTitle;
+        //         $this->author = $aTitle;
+        //         $this->pages = $aPages;
+        //     }
+        // }
+
+        // $book1 = new Book("Harry Potter", "JK Rowling", "JK Rowling");
+
+        // $book2 = new Book("Tolkien", "Lord of The Rings", 720);
+
+        // echo $book2->title;        
+        // echo $book1->author;        
+        // echo $book2->pages;        
+    ?>
+
+
+
+
+
+    <?php
+        // class Student {
+        //     var $name;
+        //     var $major;
+        //     var $gpa;
+
+        //     function __construct($aName, $aMajor, $aGpa) {
+        //         $this->name = $aName;
+        //         $this->major = $aMajor;
+        //         $this->gpa = $aGpa;
+        //     }
+
+        //     function hasHonors() {
+        //         if ($this->gpa >= 3.5) {
+        //             return "true";
+        //         } else {
+        //             return "false";
+        //         }
+        //     }
+        // }
+
+        // $student1 = new Student("Konrad", "Economy", 3.4);
+        // $student2 = new Student("Krzysztof", "Mechatronics", 4.2);
+
+        // echo $student1->hasHonors();
+        // echo $student2->hasHonors();
+    ?>
+
+
+
+
+
+    <?php
+        // class Movie {
+        //     public $title;
+        //     private $rating;
+
+        //     function __construct($aTitle, $aRating) {
+        //         $this->title = $aTitle;
+        //         $this->setRating($aRating);
+        //     }
+
+        //     function setRating($aRating) {
+        //         if ($aRating == "G" || $aRating == "PG" || $aRating == "PG-13" || $aRating == "R" || $aRating == "NR") {
+        //             $this->rating = $aRating;
+        //         } else {
+        //             $this->rating = "NR";
+        //         }
+        //     }
+
+        //     function getRating() {
+        //         return $this->rating;
+        //     }
+        // }
+
+        // $avengers = new Movie("Avengers", "PG-13");
+
+        // $avengers->setRating("Dog");
+        // echo $avengers->getRating();
+    ?>
+
+
+
+
+
+    <?php
+        // class Chef {
+        //     function makeChicken() {
+        //         echo "The chef makes chicken <br/>";
+        //     }
+            
+        //     function makeSalad() {
+        //         echo "The chef makes salad <br/>";
+        //     }
+            
+        //     function makeSpecialDish() {
+        //         echo "The chef makes BBQ ribs <br/>";
+        //     }
+        // }
+
+        // class ItalianChef extends Chef {
+        //     function makePasta() {
+        //         echo "The italian chef makes pasta <br/>";
+        //     }
+
+        //     function makeSpecialDish() {
+        //         echo "The italian chef makes chicken parm <br/>";
+        //     }
+        // }
+
+        // $chef = new Chef();
+        // $chef->makeSpecialDish();
+
+        // $italianChef = new ItalianChef();
+        // $italianChef->makeSpecialDish();
+    ?>
 </body>
 </html>

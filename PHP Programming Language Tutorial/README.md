@@ -42,3 +42,13 @@ function *function name*() {};
 <!-- Conditions -->
 %% <= and
 || <= or
+
+<!-- Classes -->
+class *Name* {
+    private *var name*->*var*;
+    public *var name*->*var*;
+
+    function __constructon() {
+
+    }
+}
