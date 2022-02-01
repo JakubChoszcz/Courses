@@ -65,6 +65,8 @@ DESCRIBE *table name*;
 
 DROP TABLE *table name*;
 
+Whenever you create a FOREIGN KEY you're going to put ON DELETE SET NULL at the end of a line / ON DELETE CASCADE
+
 <!-- Basic Queries -->
 SELECT *column name*, ...
 FROM *table name*
@@ -73,3 +75,7 @@ LIMIT *limit nuber*
 WHERE *column name* = *value*
 <!-- <, >, <=, >=, =, <> (not equal), AND, OR -->
 ... *column name* IN (*value*, *value*)
+
+SELECT DISTINCT *column name*
+
+<!-- Functions -->
