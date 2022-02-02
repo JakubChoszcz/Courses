@@ -78,4 +78,6 @@ WHERE *column name* = *value*
 
 SELECT DISTINCT *column name*
 
-<!-- Functions -->
+<!-- Triggers -->
+use *DB name*;
+DROP TRIGGER *trigger name*;
