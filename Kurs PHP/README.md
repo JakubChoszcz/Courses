@@ -23,3 +23,36 @@ session life time -> php.ini => session.gc_maxlifetime=1440
 4) DB name => $db_name
 
 include / require
+
+<!-- Date in MySQL -->
+Format - "YYYY-MM-DD HH:MM:SS" - "Y-m-d H:i:s"
+
+
+
+
+<!-- Time Actions -->
+echo time()."<br/>";
+
+echo date("Y-m-d H:i:s")."<br/>";
+
+$dataczas = new DateTime();
+
+echo $dataczas->format("Y-m-d H:i:s")."<br/>";
+
+$dzien = "26";
+$miesiac = "7";
+$rok = "1875";
+
+if (checkdate($miesiac, $dzien, $rok)) {
+    echo "Poprawna data";
+} else {
+    echo "Niepoprawna data";
+}
+
+
+
+
+<!-- SQL -->
+now() => YYYY:MM:DD HH:MM:SS
+curdate() => YYYY:MM:DD
+curtime() => HH:MM:SS
