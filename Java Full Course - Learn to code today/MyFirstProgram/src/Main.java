@@ -1,8 +1,12 @@
 import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
+
+import java.util.*;
 
 public class Main {
 
@@ -245,49 +249,191 @@ public class Main {
 		
 		// ================================
 		
-		Boolean a = true;
-		Character b = '@';
-		Integer c = 123;
-		Double d = 3.14;
-		String e = "Jakub";
-		
-		if (a == true) {
-			System.out.println("This is true");
-		}
+//		Boolean a = true;
+//		Character b = '@';
+//		Integer c = 123;
+//		Double d = 3.14;
+//		String e = "Jakub";
+//		
+//		if (a == true) {
+//			System.out.println("This is true");
+//		}
 		
 		// ================================
 		
+//		ArrayList<String> food = new ArrayList<String>();
+//
+//		food.add("pizza");
+//		food.add("hamburger");
+//		food.add("hotdog");
+//		
+//		food.set(0, "sushi");
+//		food.remove(2);
+//		food.clear();
+//		
+//		for (int i = 0; i < food.size(); i++) {
+//			System.out.println(food.get(i));
+//		}
 		
+		// ================================
+
+//		ArrayList<ArrayList<String>> groceryList = new ArrayList();
+//		
+//		ArrayList<String> bakeryList = new ArrayList<String>();
+//		bakeryList.add("pasta");
+//		bakeryList.add("garlic bread");
+//		bakeryList.add("donuts");
+//
+//		ArrayList<String> produceList = new ArrayList<String>();
+//		produceList.add("tomatoes");
+//		produceList.add("pepper");
+//		produceList.add("zucchini");
+//
+//		ArrayList<String> drinksList = new ArrayList<String>();
+//		drinksList.add("soda");
+//		drinksList.add("coffee");
+//
+//		groceryList.add(bakeryList);
+//		groceryList.add(produceList);
+//		groceryList.add(drinksList);
+//		
+//		System.out.println(groceryList.get(0).get(0));
 		
+		// ================================
+
+//		String[] animals = {"cat", "dog", "rat", "bird"};
+//		ArrayList<String> animals = new ArrayList<String>();
+//
+//		animals.add("cat");
+//		animals.add("dog");
+//		animals.add("rat");
+//		animals.add("bird");
+//		
+//		for (String i : animals) {
+//			System.out.println(i);
+//		}
 		
+		// ================================
+
+//		String name = "Jakub";
+//		int age = 21;
+//		
+//		hello(name, age);
+//		
+//		int x = 3;
+//		int y = 4;
+//		
+//		int z = add(x, y);
+//		
+//		System.out.println(z);
 		
+		// ================================
+
+//		double x = add(1.3, 2.3, 3.3);
+//		
+//		System.out.println(x);
 		
+		// ================================
 		
+//		boolean myBoolean = true;
+//		char myChar = '@';
+//		String myString = "Jakub";
+//		int myInt = 50;
+//		double myDouble = 1000;
+//
+//		System.out.printf("%b", myBoolean);
+//		System.out.printf("%c", myChar);
+//		System.out.printf("%s", myString);
+//		System.out.printf("%d", myInt);
+//		System.out.printf("%f", myDouble);
+//		
+//		System.out.printf("Hello %10s", myString);
+//		
+//		System.out.printf("You have this much money %.2f", myDouble);
+//
+//		System.out.printf("You have this much money %20f", myDouble);
+//		System.out.printf("You have this much money %+f", myDouble);
+//		System.out.printf("You have this much money %020f", myDouble);
+//		System.out.printf("You have this much money %,f", myDouble);
 		
+		// ================================
 		
+//		final double PI = 3.14159;
+//		
+//		System.out.println(PI);
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		// ================================
+
+		Car myCar1 = new Car();
+		Car myCar2 = new Car();
+
+		System.out.println(myCar1.make);
+		System.out.println(myCar1.model);
+
+		System.out.println(myCar2.make);
+		System.out.println(myCar2.model);
 		
 		
 		
 		
 		
 	}
+	
+//	static void hello(String name, int age) {
+//		System.out.println("Hello " + name);
+//		System.out.println("You are " + age);
+//	}
+//	
+//	static int add(int x, int y) {
+//		int z = x + y;
+//		
+//		return z;
+//	}
+	
+	// ================================
+
+//	static int add(int a, int b) {
+//		System.out.println("This is overloaded method #1");
+//		return a + b;
+//	}
+//	
+//	static int add(int a, int b, int c) {
+//		System.out.println("This is overloaded method #2");
+//		return a + b + c;
+//	}
+//	
+//	static int add(int a, int b, int c, int d) {
+//		System.out.println("This is overloaded method #3");
+//		return a + b + c + d;
+//	}
+//	static double add(double a, double b) {
+//		System.out.println("This is overloaded method #4");
+//		return a + b;
+//	}
+//	
+//	static double add(double a, double b, double c) {
+//		System.out.println("This is overloaded method #5");
+//		return a + b + c;
+//	}
+//	
+//	static double add(double a, double b, double c, double d) {
+//		System.out.println("This is overloaded method #6");
+//		return a + b + c + d;
+//	}
+	
+	// ================================
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
