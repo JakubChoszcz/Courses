@@ -364,14 +364,130 @@ public class Main {
 		
 		// ================================
 
-		Car myCar1 = new Car();
-		Car myCar2 = new Car();
+//		Car myCar1 = new Car();
+//		Car myCar2 = new Car();
+//
+//		System.out.println(myCar1.make);
+//		System.out.println(myCar1.model);
+//
+//		System.out.println(myCar2.make);
+//		System.out.println(myCar2.model);
+		
+		// ================================
 
-		System.out.println(myCar1.make);
-		System.out.println(myCar1.model);
+//		Human human1 = new Human("Jakub", 21, 60);
+//		Human human2 = new Human("Konrad", 20, 70);
+//		
+//		human1.eat();
+//		human2.();
+		
+		// ================================
+		
+//		DiceRoller diceRoller = new DiceRoller();
+		
+		// ================================
+		
+//		Pizza pizza = new Pizza();
+//		
+//		System.out.println("Here are the ingridients of your pizza: ");
+//		System.out.println(pizza.bread);
+//		System.out.println(pizza.sauce);
+//		System.out.println(pizza.cheese);
+//		System.out.println(pizza.topping);
+		
+		// ================================
+		
+//		Car car = new Car();
+//		
+//		System.out.println(car.toString());
+//		System.out.println(car);
+		
+		// ================================
+		
+//		Food[] refrigerator = new Food[3];
+//
+//		Food food1 = new Food("pizza");
+//		Food food2 = new Food("hamburger");
+//		Food food3 = new Food("hotdog");
+//		
+//		Food[] refrigerator = {food1, food2, food3};
+//
+////		refrigerator[0] = food1;
+////		refrigerator[1] = food1;
+////		refrigerator[2] = food2;
+//
+//		System.out.println(refrigerator[0].name);
+//		System.out.println(refrigerator[1].name);
+//		System.out.println(refrigerator[2].name);
+		
+		// ================================
+		
+//		Garage garage = new Garage();
+//
+//		Car car1 = new Car("BMW");
+//		Car car2 = new Car("Tesla");
+//
+//		garage.park(car1);
+//		garage.park(car2);
+		
+		// ================================
 
-		System.out.println(myCar2.make);
-		System.out.println(myCar2.model);
+//		Friend friend1 = new Friend("Jakub");
+//		Friend friend2 = new Friend("Konrad");
+//		Friend friend3 = new Friend("Rafał");
+//		Friend friend4 = new Friend("Krzysztof");
+//		
+//		Friend.displayFriends()
+		
+		// ================================
+		
+//		Car car = new Car();
+//		
+//		car.go();
+//		
+//		Bicycle bike = new Bicycle();
+//		
+//		bike.stop();
+//
+//		System.out.println(car.speed);
+//		System.out.println(bike.speed);
+//		System.out.println(car.doors);
+//		System.out.println(bike.pedals);
+		
+		// ================================
+		
+//		Animal animal = new Animal();
+//		Dog dog = new Dog();
+//
+//		dog.speak();
+//		animal.speak();
+		
+		// ================================
+
+		Hero hero1 = new Hero("Batman", 42, "$$$");
+		Hero hero2 = new Hero("Superman", 43, "everything");
+
+		System.out.println(hero1.name);
+		System.out.println(hero1.age);
+		System.out.println(hero1.power);
+		System.out.println(hero2);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -422,6 +538,17 @@ public class Main {
 //	}
 	
 	// ================================
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
