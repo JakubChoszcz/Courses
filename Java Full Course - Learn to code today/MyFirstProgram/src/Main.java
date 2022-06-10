@@ -464,13 +464,136 @@ public class Main {
 		
 		// ================================
 
-		Hero hero1 = new Hero("Batman", 42, "$$$");
-		Hero hero2 = new Hero("Superman", 43, "everything");
+//		Hero hero1 = new Hero("Batman", 42, "$$$");
+//		Hero hero2 = new Hero("Superman", 43, "everything");
+//
+//		System.out.println(hero1.name);
+//		System.out.println(hero1.age);
+//		System.out.println(hero1.power);
+//		System.out.println(hero2);
+		
+		// ================================
+		
+//		Vehicle vehicle = new Vehicle();
+//		Car car = new Car();
+//		
+//		car.go();
+		
+		// ================================
+		
+//		Car car = new Car("Chevrolet", "Camaro", 2021);
+//		
+//		car.seyYear(2022);
+//
+//		System.out.println(car.getMake());
+//		System.out.println(car.getModel());
+//		System.out.println(car.getYear());
+		
+		// ================================
 
-		System.out.println(hero1.name);
-		System.out.println(hero1.age);
-		System.out.println(hero1.power);
-		System.out.println(hero2);
+//		Car car1 = new Car("Chevrolet", "Camaro", 2021);
+////		Car car2 = new Car("Ford", "Mustang", 2022);
+////		car2.copy(car1);
+//		Car car2 = new Car(car1);
+//		
+//		System.out.println(car1);
+//		System.out.println(car2);
+//		System.out.println();
+//		System.out.println(car1.getMake());
+//		System.out.println(car1.getModel());
+//		System.out.println(car1.getYear());
+//		System.out.println();
+//		System.out.println(car2.getMake());
+//		System.out.println(car2.getModel());
+//		System.out.println(car2.getYear());
+		
+		// ================================
+		
+//		Rabbit rabbit = new Rabbit();
+//		Hawk hawk = new Hawk();
+//		Fish fish = new Fish();
+//		
+//		rabbit.flee();
+//		hawk.hunt();
+//		fish.flee();
+//		fish.hunt();
+		
+		// ================================
+		
+//		Car car = new Car();
+//		Bicycle bicycle = new Bicycle();
+//		Boat boat = new Boat();
+//		
+//		Vehicle[] racers = {car, bicycle, boat};
+//
+//		for(Vehicle x : racers) {
+//			x.go();
+//		}
+		
+		// ================================
+		
+//		Scanner scanner = new Scanner(System.in);
+//		Animal animal;
+//		
+//		System.out.println("What animal do you want?");
+//		System.out.print("(1=dog) or (2=cat)");
+//		int choice = scanner.nextInt();
+//		
+//		if (choice == 1) {
+//			animal = new Dog();
+//			animal.speak();
+//		} else if (choice == 2) {
+//			animal = new Cat();
+//			animal.speak();
+//		} else {
+//			animal = new Animal();
+//			System.out.println("That choice was invalid");
+//			animal.speak();
+//		}
+		
+		// ================================
+		
+//		Scanner scanner = new Scanner(System.in);
+//		
+//		try {	
+//			System.out.println("Enter a whole number to divide: ");
+//			int x = scanner.nextInt();
+//			
+//			System.out.println("Enter a whole number to divide by: ");
+//			int y = scanner.nextInt();
+//			
+//			int z = x/y;
+//			
+//			System.out.println("result: " + z);
+//		} catch (ArithmeticException e) {
+//			System.out.println("You can't divide by zero!");
+//		} catch (InputMismatchException e) {
+//			System.out.println("Please enter a number!");
+//		} catch (Exception e) {
+//			System.out.println("Something went wrong!");
+//		} finally {
+//			scanner.close();
+//		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -538,6 +661,15 @@ public class Main {
 //	}
 	
 	// ================================
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

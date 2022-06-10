@@ -1,11 +1,8 @@
 public class Vehicle {
-	double speed;
-	
-	void go() {
-		System.out.println("This vehicle is movig");
+
+	public void go() {
+		// TODO Auto-generated method stub
+		
 	}
 	
-	void stop() {
-		System.out.println("This vehicle is stopped");
-	}
 }
