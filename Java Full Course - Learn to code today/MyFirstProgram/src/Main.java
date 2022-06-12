@@ -5,12 +5,15 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.border.Border;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -695,10 +698,108 @@ public class Main {
 //		frame.add(label);
 //		frame.pack();
 		
+		// ================================
+		
+//		ImageIcon icon = new ImageIcon("logo.png");
+//		
+//		JLabel label = new JLabel();
+//		label.setText("Hi");
+//		label.setIcon(icon);
+//		label.setVerticalAlignment(JLabel.BOTTOM);
+//		label.setHorizontalAlignment(JLabel.RIGHT);
+//		label.setBounds(100, 100, 75, 75);
+//		
+//		JPanel redPanel = new JPanel();
+//		redPanel.setBackground(Color.red);
+//		redPanel.setBounds(0, 0, 250, 250);
+//		
+//		JPanel bluePanel = new JPanel();
+//		bluePanel.setBackground(Color.blue);
+//		bluePanel.setBounds(250, 0, 250, 250);
+//		
+//		JPanel greenPanel = new JPanel();
+//		greenPanel.setBackground(Color.green);
+//		greenPanel.setBounds(0, 250, 500, 250);
+//		greenPanel.setLayout(new BorderLayout());
+//		
+//		JFrame frame = new JFrame();
+//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		frame.setLayout(null);
+//		frame.setSize(750, 750);
+//		frame.setVisible(true);
+//		frame.add(redPanel);
+//		frame.add(bluePanel);
+//		frame.add(greenPanel);
+//		greenPanel.add(label);
+		
+		// ================================
+		
+//		  new MyFrame();
+		
+		// ================================
+		
+		JFrame frame = new JFrame();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(500, 500);
+		frame.setLayout(new BorderLayout(10, 10));
+		frame.setVisible(true);
+
+		JPanel panel1 = new JPanel();
+		JPanel panel2 = new JPanel();
+		JPanel panel3 = new JPanel();
+		JPanel panel4 = new JPanel();
+		JPanel panel5 = new JPanel();
+
+		panel1.setBackground(Color.red);
+		panel2.setBackground(Color.green);
+		panel3.setBackground(Color.yellow);
+		panel4.setBackground(Color.magenta);
+		panel5.setBackground(Color.blue);
+
+		panel1.setPreferredSize(new Dimension(100, 50));
+		panel2.setPreferredSize(new Dimension(50, 100));
+		panel3.setPreferredSize(new Dimension(100, 50));
+		panel4.setPreferredSize(new Dimension(50, 100));
+		panel5.setPreferredSize(new Dimension(100, 100));
+
+		frame.add(panel1, BorderLayout.NORTH);
+		frame.add(panel2, BorderLayout.EAST);
+		frame.add(panel3, BorderLayout.SOUTH);
+		frame.add(panel4, BorderLayout.WEST);
+		frame.add(panel5, BorderLayout.CENTER);
+		
+		//---------------- sub panels ----------------
+
+		JPanel panel6 = new JPanel();
+		JPanel panel7 = new JPanel();
+		JPanel panel8 = new JPanel();
+		JPanel panel9 = new JPanel();
+		JPanel panel10 = new JPanel();
+
+		panel6.setBackground(Color.black);
+		panel7.setBackground(Color.darkGray);
+		panel8.setBackground(Color.gray);
+		panel9.setBackground(Color.LIGHT_GRAY);
+		panel10.setBackground(Color.white);
+		
+		panel5.setLayout(new BorderLayout());
+
+		panel6.setPreferredSize(new Dimension(50, 50));
+		panel7.setPreferredSize(new Dimension(50, 50));
+		panel8.setPreferredSize(new Dimension(50, 50));
+		panel9.setPreferredSize(new Dimension(50, 50));
+		panel10.setPreferredSize(new Dimension(50, 50));
+		
+		//---------------- sub panels ----------------
+
+		panel5.add(panel6, BorderLayout.NORTH);
+		panel5.add(panel7, BorderLayout.EAST);
+		panel5.add(panel8, BorderLayout.SOUTH);
+		panel5.add(panel9, BorderLayout.WEST);
+		panel5.add(panel10, BorderLayout.CENTER);
 		
 		
 		
-		  
 		
 		
 		
@@ -775,6 +876,13 @@ public class Main {
 //	}
 	
 	// ================================
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
