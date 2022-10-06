@@ -1,0 +1,129 @@
+==== commands ====
+psql --username=freecodecamp dbname=postgres
+sh
+bash
+#!/bin/bash
+chmod +x
+
+if [[ CONDITION ]]
+then
+  STATEMENTS
+fi
+
+if [[ CONDITION ]]
+then
+  STATEMENTS
+else
+  STATEMENTS
+fi
+
+-eq (equal)
+-ne (not equal)
+-lt (less than)
+-le (less than or equal)
+-gt (greater than)
+-ge (greater than or equal)
+
+for (( i = 10; i > 0; i-- ))
+do
+  echo $i
+done
+
+while [[ CONDITION ]]
+do
+  STATEMENTS
+done
+
+$RANDOM%75
+
+(( )) - changes a variable
+$((  )) - doesn't change a variable
+
+if (( CONDITION ))
+then
+  STATEMENTS
+elif [[ CONDITION ]]
+then
+  STATEMENTS
+fi
+
+FUNCTION_NAME() {
+  STATEMENTS
+}
+
+until [[ CONDITION ]]
+do
+  STATEMENTS
+done
+
+cat courses.csv | while read MAJOR COURSE
+do
+  <STATEMENTS>
+done
+
+psql -U postgres < students.sql
+
+>
+<
+1>
+2>
+|
+
+case EXPRESSION in
+  PATTERN) STATEMENTS ;;
+  PATTERN) STATEMENTS ;;
+  PATTERN) STATEMENTS ;;
+  *) STATEMENTS ;;
+esac
+
+ [[ a1 =~ ^[0-9]$ ]]; echo $?
+
+ [[ ! 11 =~ ^[0-9]+$ ]]; echo $?
+
+==== postgresql ====
+\l
+CREATE DATABASE dbname;
+\c dbname
+\d
+CREATE TABLE tname();
+\d tname
+ALTER TABLE tname ADD COLUMN cname DATATYPE;
+ALTER TABLE tname DROP COLUMN cname;
+ALTER TABLE tname RENAME COLUMN cname TO new_cname;
+INSERT INTO tname(cname_1, cname_2) VALUES(value1, value2);
+SELECT cname FROM tname;
+DELETE FROM table_name WHERE condition;
+DROP TABLE table_name;
+ALTER DATABASE database_name RENAME TO new_database_name;
+DROP DATABSE dname;
+INSERT INTO tname (cname_1, cname_2) VALUES (value1_1, value1_2), (value2_1, value2_2);
+UPDATE table_name SET column_name=new_value WHERE condition;
+SELECT columns FROM table_name ORDER BY column_name;
+ALTER TABLE table_name DROP CONSTRAINT constraint_name;
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name); one-to-one
+ALTER TABLE table_name ADD UNIQUE(column_name);
+ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
+CREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name); one-to-many
+ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);
+ALTER TABLE table_name ADD PRIMARY KEY(column1, column2); composite primary key
+SELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = table_2.foreign_key_column;
+SELECT columns FROM junction_table FULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column FULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;
+TRUNCATE table_name;
+
+
+
+==== datatypes ====
+INT
+VARCHAR(max_length)
+SERIAL
+DATE
+NUMERIC(4, 1) => 123,4
+BOOLEAN
+
+
+
+==== next ====
+
+
+It's coming along. Add another echo command in the function below the other one. Make it output text that looks like this:
