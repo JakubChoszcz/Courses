@@ -123,7 +123,17 @@ BOOLEAN
 
 
 
+==== nano ====
+^ - ctrl
+M - meta - escape/alt
+
+ctrl + o - save as
+ctrl + x - exit
+ctrl + k - cut a line
+ctrl + u - paste a line
+
+
+
+
 ==== next ====
-
-
 It's coming along. Add another echo command in the function below the other one. Make it output text that looks like this:
