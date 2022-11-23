@@ -1,0 +1,22 @@
+tsc namefile.ts - compile ts to js
+
+Types:
+    Number
+    String
+    Boolean
+    Null
+    Undefined
+    Void
+    Object
+    Array
+    Tuples
+    Any
+    Never
+    unknow
+
+Situations:
+    a fnc accepts 2 numbers
+    a fnc returns a string
+
+Syntax:
+    let variableName: type = value
