@@ -11,3 +11,9 @@ userId.toFixed();
 // userId = "Jakub"
 // boolean
 var isLoggedIn = false;
+// any
+var hero;
+function getHero() {
+    return "thor";
+}
+hero = getHero();
