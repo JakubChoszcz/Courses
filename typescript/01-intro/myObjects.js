@@ -5,11 +5,15 @@
 //     isActive: true
 // }
 exports.__esModule = true;
-function createUser(user) {
-    return {
-        name: user.name,
-        email: user.email,
-        isActive: user.isActive
-    };
-}
-createUser({ name: "Jakub", email: "", isActive: true });
+var myUser = {
+    _id: "1234",
+    name: "n",
+    email: "e",
+    isActive: false
+};
+var myCard = {
+    cardNumber: "1234",
+    cardDate: "2022.11.24",
+    cvv: 1234
+};
+myUser.email = "e";

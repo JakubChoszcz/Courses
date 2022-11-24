@@ -14,22 +14,62 @@
 //     return {name: 'typescript', price: 399}
 // }
 
-type bool = boolean
+// type aliasses
+// type bool = boolean
 
+// type User = {
+//     name: string;
+//     email: string;
+//     isActive: bool
+// }
+
+// function createUser(user: User): User {
+//     return {
+//         name: user.name,
+//         email: user.email,
+//         isActive: user.isActive
+//     }
+// }
+
+// createUser({name: "Jakub", email: "", isActive: true})
+
+// readonly
 type User = {
+    readonly _id: string;
     name: string;
     email: string;
-    isActive: bool
+    isActive: boolean;
+    creditCard?: number
 }
 
-function createUser(user: User): User {
-    return {
-        name: user.name,
-        email: user.email,
-        isActive: user.isActive
-    }
+let myUser: User = {
+    _id: "1234",
+    name: "n",
+    email: "e",
+    isActive: false,
 }
 
-createUser({name: "Jakub", email: "", isActive: true})
+type cardNumber = {
+    cardNumber: string
+}
+
+type cardDate = {
+    cardDate: string
+}
+
+type cardDeatils = cardNumber & cardDate & {
+    cvv: number
+}
+
+const myCard: cardDeatils = {
+    cardNumber: "1234",
+    cardDate: "2022.11.24",
+    cvv: 1234
+}
+
+myUser.email = "e"
+// myUser._id = "5678" 
+
+// function createUser(u: User) {}
 
 export {}
