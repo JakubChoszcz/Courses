@@ -9,6 +9,8 @@ var Jakub = {
     },
     getCoupon: function (name, off) {
         return 10;
-    }
+    },
+    gitHubToken: 'github',
+    role: "admin"
 };
 Jakub.email = 'cj@cj.cj';
