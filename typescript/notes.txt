@@ -20,3 +20,6 @@ Situations:
 
 Syntax:
     let variableName: type = value
+
+    tsc --init
+    tsc -w 
