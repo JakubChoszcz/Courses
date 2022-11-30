@@ -15,6 +15,7 @@ class User {
     constructor(email, name) {
         this.email = email;
         this.name = name;
+        // private _courseCount = 1
         this._courseCount = 1;
         this.city = "Warsaw";
     }
@@ -32,6 +33,15 @@ class User {
             throw new Error("Course count should be more than 1");
         }
         this._courseCount = courseNum;
+    }
+}
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 4;
     }
 }
 const jakub = new User("jc@jc.jc", "Jakub");

@@ -14,7 +14,9 @@
 // }
 
 class User {
-    private _courseCount = 1
+    // private _courseCount = 1
+    protected _courseCount = 1
+
     readonly city: string = "Warsaw"
     constructor(
         public email: string, 
@@ -34,12 +36,20 @@ class User {
         return this._courseCount
     }
 
-    set courseCount(courseNum) {
+    set courseCount(courseNum: number) {
         if (courseNum <= 1) {
             throw new Error("Course count should be more than 1")
         }
 
         this._courseCount = courseNum
+    }
+}
+
+class SubUser extends User {
+    isFamily: boolean = true
+
+    changeCourseCount() {
+        this._courseCount = 4
     }
 }
 
