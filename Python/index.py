@@ -168,3 +168,133 @@ import re
 x = "My 2 favorite numbers are 19 and 42"
 y = re.findall('[0-9]+', x)
 print(y)
+
+# Regular Expressions: Practical Applications
+
+# Networking with Python
+import socket
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4e.org', 80))
+
+# Networking Protocol
+
+# Networking: Write a Web Browser
+import socket
+
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4.org', 80))
+cmd = 'GET http://data/pr4e.org/romeo.txt HTTP/1.0\n\n'.encode()
+mysock.send(cmd)
+
+while True :
+    data = mysock.recv(512)
+    if (len(data) < 1) :
+        break
+    print(data.decode())
+mysock.close()
+
+# Networking: Text Processing
+print(ord('H'))
+import socket
+
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4.org', 80))
+cmd = 'GET http://data/pr4e.org/romeo.txt HTTP/1.0\n\n'.encode() # encode data before send
+mysock.send(cmd)
+
+while True :
+    data = mysock.recv(512)
+    if (len(data) < 1) :
+        break
+    print(data.decode()) # descode data before print
+mysock.close()
+
+# Networking: Using urllib in Python
+import urllib.request, urllib.parse, urllib.error
+
+fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
+
+for line in fhand :
+    print(line.decode().strip())
+
+counts = dict()
+for line in fhand :
+    words = line.decode().split()
+    for word in words :
+        counts[word] = counts.get(word, 0) + 1
+print(counts)
+
+fhand = urllib.request.urlopen('http://www.dr-chuck.com/page1.html')
+for line in fhand :
+    print(line.decode().strip())
+
+# Networking: Web Scraping with Python
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
+
+url = input('Enter - ')
+html = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(html, 'html.parser')
+
+tags = soup('a')
+for tag in tags :
+    print(tag.get('href', None))
+
+
+# Using Web Services
+
+# Web Services: XML
+<person>
+  <name>Chuck</name>
+  <phone type="intl">
+    +1 734 303 4456
+  </phone>
+  <email hide="yes" />
+</person>
+
+# Web Services: XML Schema
+import xml.etree.ElementTree as ET
+data = '''<person>
+    <name>Chuck</name>
+    <phone type=intl>
+        +1 734 303 4456
+    </phone>
+    <email hide=yes/>
+</person>'''
+
+tree = ET.fromstring(data)
+print('Name:', tree.find('name').text)
+print('Attr:', tree.find('email').get('hide'))
+
+# Web Services: JSON
+import json
+data = '''{
+    "name" : "Chuck",
+    "phone" : {
+        "type" : "intl",
+        "number" : "+1 734 303 4467"
+    },
+    "email" : {
+        "hide" : "yes"
+    }    
+}'''
+
+info = json.loads(data)
+print('Name:', info["name"])
+
+input = '''[
+    {"id":"001","name":"Mike","att":"x"},{"id":"002","name":"Chuck","att":"y"}
+]'''
+
+info = json.loads(input)
+print('User count:', len(info))
+for item in info:
+    print('Name:', item['name'])
+    print('Id:', item['id'])
+    print("Attribute:", item['att'])
+
+# Web Services: Service Oriented Approach
+
+# Web Services: APIs
+
+# Web Services: API Rate Limiting and Security
