@@ -298,3 +298,7 @@ for item in info:
 # Web Services: APIs
 
 # Web Services: API Rate Limiting and Security
+
+# Python Objects
+
+# Objects: A Sample Class
